@@ -1,0 +1,56 @@
+{
+	"id": "alfred.wang.sac.htmlcontainer",
+	"version": "1.0.0",
+	"name": "HTML container",
+	"description": "HTML container is used to insert custom HTML code to SAC Analytics Application as a widget.",
+	"newInstancePrefix": "HTMLContainer",
+	"icon": "",
+	"vendor": "",
+	"eula": "",
+	"license": "",
+        "webcomponents": [
+		{
+			"kind": "main",
+			"tag": "alfred-wang-sac-htmlcontainer",
+			"url": "https://alfredwangtj.github.io/SAC-HTMLContainer/htmlcontainer.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+	],
+        "properties": {
+		"code": {
+			"type": "string",
+			"description": "Custom HTML code.",
+			"default": "<div> </div>"
+		},
+                "id": {
+			"type": "string",
+			"description": "ID of this widget.",
+			"default": ""
+		}
+	},
+        "methods": {
+                "setCode": {
+                  "description": "Insert HTML code.",
+                  "parameters": [
+                    {
+                      "name": "HTMLCode",
+                      "type": "string",
+                      "description": "HTML code."
+                    }
+                  ],
+                  "body": "this.code = HTMLCode; this.HC.innerHTML = HTMLCode"
+                },
+                "getCode": {
+                  "returnType": "string",
+                  "description": "Get HTML code.",
+                  "body": "return this.code;"
+                }
+              },
+              "events": {
+                "onInitialization": {
+                  "description": "Called when HTML Container is loaded on Analytics Application."
+                }
+              }
+        
+}
