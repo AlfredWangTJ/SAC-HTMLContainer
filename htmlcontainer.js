@@ -9,12 +9,15 @@
 			super(); 
 			let HC = this.attachShadow({mode: "open"});
 			HC.appendChild(template.content.cloneNode(true));
-			this.addEventListener("load", event => {
-				var event = new Event("onInitialization");
-				this.dispatchEvent(event);
-			});
+			this.addEventListener("changeCode", changeCode(this.HC.getCode()));
 		}
+
+                changeCode(code){
+                        this.HC.getElementById("chc").innerHTML = code;
+                }
+
 	}
+
 
 	customElements.define("alfred-wang-sac-htmlcontainer", HTMLContainer);
 })();
