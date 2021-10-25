@@ -11,7 +11,7 @@
         "webcomponents": [
 		{
 			"kind": "main",
-			"tag": "alfred-wang-sac-htmlcontainer",
+			"tag": "sac-htmlcontainer",
 			"url": "https://alfredwangtj.github.io/SAC-HTMLContainer/htmlcontainer.js",
 			"integrity": "",
 			"ignoreIntegrity": true
