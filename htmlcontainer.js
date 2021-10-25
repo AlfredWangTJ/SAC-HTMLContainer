@@ -11,11 +11,11 @@
 			this._shadowRoot.appendChild(template.content.cloneNode(true));
 		}
 
-                onCustomWidgetAfterUpdate(changedProperties) {
-			if ("code" in changedProperties) {
-				this.getElementsByID("chc").innerHTML = changedProperties["code"];
-			}
-		    }
+                // onCustomWidgetAfterUpdate(changedProperties) {
+		// 	if ("code" in changedProperties) {
+		// 		this.getElementsByID("chc").innerHTML = changedProperties["code"];
+		// 	}
+		//     }
 	}
 
 	customElements.define("sac-htmlcontainer", HTMLContainer);
