@@ -9,15 +9,14 @@
 			super(); 
 			let HC = this.attachShadow({mode: "open"});
 			HC.appendChild(template.content.cloneNode(true));
-			this.addEventListener("changeCode", changeCode(this.HC.getCode()));
 		}
 
-                changeCode(code){
-                        this.HC.getElementById("chc").innerHTML = code;
-                }
-
+                onCustomWidgetAfterUpdate(oChangedProperties) {
+			if ("code" in changedProperties) {
+				this.getElementsByID("chc").innerHTML = changedProperties["code"];
+			}
+		    }
 	}
-
-
-	customElements.define("alfred-wang-sac-htmlcontainer", HTMLContainer);
+	
+	customElements.define("sac-htmlcontainer", HTMLContainer);
 })();
