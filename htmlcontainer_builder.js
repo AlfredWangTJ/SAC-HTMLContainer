@@ -5,7 +5,7 @@
         <fieldset>
             <legend>Custom HTML Code</legend>
                 <textarea id="hcode" rows="25" cols="40"></textarea>
-                <input id="btn_code" type="button">提交</input>
+                <input id="btn_code" type="button" value="提交"/>
         </fieldset>
     </form>
               `;
@@ -18,6 +18,13 @@
       this._shadowRoot
         .getElementById("form")
         .addEventListener("submit", this._submit.bind(this));
+      this._shadowRoot
+        .getElementById("btn_code")
+        .addEventListener("click", (event) => {
+          this._shadowRoot
+            .getElementById("form")
+            .dispatchEvent(new Event("submit"));
+        });
       this._htmlcode = "<div></div>";
     }
 
