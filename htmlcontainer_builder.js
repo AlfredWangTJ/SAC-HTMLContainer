@@ -4,7 +4,8 @@
     <form id="form">
         <fieldset>
             <legend>Custom HTML Code</legend>
-                <textarea id="hcode" rows="8" cols="25"></textarea>
+                <textarea id="hcode" rows="25" cols="40"></textarea>
+                <input id="btn_code" type="button">提交</input>
         </fieldset>
     </form>
               `;
