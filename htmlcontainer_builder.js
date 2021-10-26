@@ -5,6 +5,7 @@
         <fieldset>
             <legend>Custom HTML Code</legend>
                 <textarea id="hcode" rows="25" cols="40"></textarea>
+                <p></p>
                 <input id="btn_code" type="button" value="提交"/>
         </fieldset>
     </form>
