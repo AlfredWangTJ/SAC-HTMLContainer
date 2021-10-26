@@ -21,7 +21,9 @@
     }
 
     onCustomWidgetAfterUpdate(oChangedProperties) {
-      this.changeHTML("<p>ABCD</p>");
+      if ("code" in oChangedProperties) {
+        this.changeHTML(oChangedProperties["code"]);
+      }
     }
 
     changeHTML(val) {
@@ -29,7 +31,6 @@
         this._dom.parentNode.removeChild(this._dom);
       }
 
-      //var shadow = window.getSelection(this._shadowRoot);
       this._dom = document.createElement("div");
       this._dom.innerHTML = val;
       this._shadowRoot.appendChild(this._dom);
