@@ -1,51 +1,57 @@
 {
-	"id": "alfred.wang.sac.htmlcontainer",
-	"version": "1.0.0",
-	"name": "HTML container",
-	"description": "HTML container is used to insert custom HTML code to SAC Analytics Application as a widget.",
-	"newInstancePrefix": "HTMLContainer",
-	"icon": "https://alfredwangtj.github.io/SAC-HTMLContainer/console.png",
-	"vendor": "Alfred",
-	"eula": "",
-	"license": "",
-        "webcomponents": [
-		{
-			"kind": "main",
-			"tag": "sac-htmlcontainer",
-			"url": "https://alfredwangtj.github.io/SAC-HTMLContainer/htmlcontainer.js",
-			"integrity": "",
-			"ignoreIntegrity": true
-		}
-	],
-        "properties": {
-		"code": {
-			"type": "string",
-			"description": "Custom HTML code.",
-			"default": "<div> </div>"
-		}
-	},
-        "methods": {
-                "setCode": {
-                  "description": "Insert HTML code.",
-                  "parameters": [
-                    {
-                      "name": "HTMLCode",
-                      "type": "string",
-                      "description": "HTML code."
-                    }
-                  ],
-                  "body": "this.code = HTMLCode;"
-                },
-                "getCode": {
-                  "returnType": "string",
-                  "description": "Get HTML code.",
-                  "body": "return this.code;"
-                }
-              },
-              "events": {
-                "changeCode": {
-                  "description": "Called to change code of HTML Container."
-                }
-              }
-        
+  "id": "alfred.wang.sac.htmlcontainer",
+  "version": "1.0.0",
+  "name": "HTML container",
+  "description": "HTML container is used to insert custom HTML code to SAC Analytics Application as a widget.",
+  "newInstancePrefix": "HTMLContainer",
+  "icon": "https://alfredwangtj.github.io/SAC-HTMLContainer/console.png",
+  "vendor": "Alfred",
+  "eula": "",
+  "license": "",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "sac-htmlcontainer",
+      "url": "https://alfredwangtj.github.io/SAC-HTMLContainer/htmlcontainer.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    },
+    {
+      "kind": "builder",
+      "tag": "sac-htmlcontainer-builder",
+      "url": "https://alfredwangtj.github.io/SAC-HTMLContainer/htmlcontainer_builder.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "Custom HTML code.",
+      "default": "<div> </div>"
+    }
+  },
+  "methods": {
+    "setCode": {
+      "description": "Insert HTML code.",
+      "parameters": [
+        {
+          "name": "HTMLCode",
+          "type": "string",
+          "description": "HTML code."
+        }
+      ],
+      "body": "this.code = HTMLCode;"
+    },
+    "getCode": {
+      "returnType": "string",
+      "description": "Get HTML code.",
+      "body": "return this.code;"
+    }
+  },
+  "events": {
+    "changeCode": {
+      "description": "Called to change code of HTML Container."
+    }
+  }
 }

@@ -21,19 +21,18 @@
     }
 
     onCustomWidgetAfterUpdate(oChangedProperties) {
-	this.changeHTML("<p>ABCD</p>");
+      this.changeHTML("<p>ABCD</p>");
     }
 
-    changeHTML(val){
-	    if(this._dom){
-		    this._dom.parentNode.removeChild(this._dom);
-	    }
+    changeHTML(val) {
+      if (this._dom) {
+        this._dom.parentNode.removeChild(this._dom);
+      }
 
-	    //var shadow = window.getSelection(this._shadowRoot);
-	    this._dom = document.createElement("div");
-	    this._dom.innerHTML = val;
-	    this._shadowRoot.appendChild(this._dom);
-
+      //var shadow = window.getSelection(this._shadowRoot);
+      this._dom = document.createElement("div");
+      this._dom.innerHTML = val;
+      this._shadowRoot.appendChild(this._dom);
     }
   }
 
